@@ -49,7 +49,7 @@ class Dog
       FROM dogs
       WHERE id = ?
     SQL
-    dog = DB[:conn].execute(sql, id).map {|row| self.new_from_db(row[0])}
+    dog = DB[:conn].execute(sql, id).map {|row| self.new_from_db(row)}.first
   end
   
 end
