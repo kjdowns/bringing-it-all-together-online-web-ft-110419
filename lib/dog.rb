@@ -33,7 +33,7 @@ class Dog
     DB[:conn].execute("DROP TABLE IF EXISTS dogs")
   end
   
-  def self.create(id: nil, name:, breed:)
+  def self.create(hash)
     dog = Dog.new(id, name, breed)
     dog.save
     dog
