@@ -19,6 +19,10 @@ class Dog
     self
   end
   
+  def update
+    
+  end
+  
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS dogs(
