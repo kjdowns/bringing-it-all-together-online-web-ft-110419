@@ -40,12 +40,7 @@ class Dog
   end
   
   def self.new_from_db(row)
-    sql = <<-SQL
-      SELECT *
-      FROM dogs 
-      WHERE id = ?
-    SQL
-    DB[:conn].execute(sql, row[0])
+    dog = Dog.new(id: row[0], name: row[1], breed: row[2])
   end
   
 end
