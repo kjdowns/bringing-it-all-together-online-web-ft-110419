@@ -52,7 +52,7 @@ class Dog
     dog = DB[:conn].execute(sql, id).map {|row| self.new_from_db(row)}.first
   end
   
-  def self.find_or_create_by(hash)
+  def self.find_or_create_by(name:, breed:)
     
   end
   
