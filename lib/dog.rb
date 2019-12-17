@@ -15,7 +15,7 @@ class Dog
       VALUES (?,?)
     SQL
     DB[:conn].execute(sql, self.name, self.breed)
-    DB[:conn].execute("")
+    DB[:conn].execute("SELECT last_insert_row")
     self
   end
   
