@@ -39,4 +39,13 @@ class Dog
     dog
   end
   
+  def self.new_from_db(row)
+    sql = <<-SQL
+      SELECT *
+      FROM dogs 
+      WHERE id = ?
+    SQL
+    DB[:conn].execute(sql, row[0])
+  end
+  
 end
