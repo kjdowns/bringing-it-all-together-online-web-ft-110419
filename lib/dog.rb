@@ -9,6 +9,11 @@ class Dog
     @breed = breed
   end
   
+  def save
+    
+    dog
+  end
+  
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS dogs(
