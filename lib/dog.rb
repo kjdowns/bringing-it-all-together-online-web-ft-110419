@@ -20,7 +20,10 @@ class Dog
   end
   
   def update
-    
+    sql = <<-SQL
+      SELECT *
+      FROM 
+    SQL
   end
   
   def self.create_table
