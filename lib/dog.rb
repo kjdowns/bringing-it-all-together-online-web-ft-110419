@@ -63,6 +63,10 @@ class Dog
     dog
   end
   
+  def self.find_by_name(name)
+    self.find_or_create_by(name: name)
+  end
+  
 end
 
 
